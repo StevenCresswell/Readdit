@@ -19,7 +19,7 @@ export const newsFeedSlice = createSlice({
     },
     reducers: {
         changeSubreddit: (state, action) => {
-            state.currentSubreddit = action.payload
+            state.currentSubreddit = `r/${action.payload}`
         }
     },
     extraReducers: (builder) => {
