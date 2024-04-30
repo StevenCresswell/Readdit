@@ -16,11 +16,6 @@ const NewsFeed = () => {
     if (dataIsLoading) return <div>Loading News Feed</div>;
     if (dataLoadFailed) return <div>Failed to Load News Feed</div>
 
-
-    /* put this in the return statement when you have made the post component:
-    {posts.map((post) => (
-        <Post post={post} />
-    ))}*/
     return (
         <div className="newsFeedContainer">
             {posts.map((post) => (
