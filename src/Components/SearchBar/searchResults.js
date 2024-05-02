@@ -1,12 +1,12 @@
 import React from "react";
-import { isSearching, failedSearch, selectSearchData, selectSearchTerm } from "./searchBarSlice";
+import { isSearching, failedSearch, selectSearchData, selectPreviousSearchTerm } from "./searchBarSlice";
 import { useSelector } from "react-redux";
 import Post from "../Post/post";
 
 const SearchResults = () => {
     const searching = useSelector(isSearching)
     const searchFailed = useSelector(failedSearch)
-    const currentSearchTerm = useSelector(selectSearchTerm)
+    const previousSearchTerm = useSelector(selectPreviousSearchTerm)
     const searchResults = useSelector(selectSearchData)
 
     if (searching) return <div>Searching for results...</div>
@@ -14,7 +14,7 @@ const SearchResults = () => {
 
     return (
         <div className="searchResultsContainer">
-            <h2>{`Showing search results for "${currentSearchTerm}"`}</h2>
+            <h2>{`Showing search results for "${previousSearchTerm}"`}</h2>
             {searchResults.map((result) => (
                 <Post post={result} />
     ))}

@@ -1,5 +1,6 @@
 import React from "react";
 import { changeSubreddit } from "../NewsFeed/newsFeedSlice";
+import { addFavorite } from "../Favorites/favoritesSlice";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
@@ -34,6 +35,9 @@ const Post = ({post}) => {
     const handleLinkClick = () => {
         window.open(url, "_blank", "noreferrer")
     }
+    const handleAddition = () => {
+        dispatch(addFavorite(subreddit))
+    }
     
     return (
         <div className="postContainer">
@@ -51,7 +55,7 @@ const Post = ({post}) => {
             {selftext && <p className="blurb">{`${blurb}...`}</p>}
             <p className="postScore">{score}</p>
             <p className="postAuthor">{author}</p>
-            <p className="postSubreddit" onClick={handleSubredditClick}>{`r/${subreddit}`}</p>
+            <p className="postSubreddit" onClick={handleSubredditClick}>{`r/${subreddit}`}</p><button onClick={handleAddition}>+</button>
         </div>
     )
 }

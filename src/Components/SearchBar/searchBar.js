@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { changeSearchTerm, makeQuery, selectSearchTerm } from "./searchBarSlice";
+import { changeSearchTerm, makeQuery, selectSearchTerm, setPreviousSearchTerm } from "./searchBarSlice";
 import { useNavigate } from "react-router-dom";
 
 const SearchBar = () => {
@@ -15,8 +15,10 @@ const SearchBar = () => {
         e.preventDefault()
         if (searchTerm) {
         dispatch(makeQuery(searchTerm))
+        dispatch(setPreviousSearchTerm(searchTerm))
         }
         navigate('/search-results')
+        dispatch(changeSearchTerm(''))
     }
 
     return (

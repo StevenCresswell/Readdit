@@ -15,12 +15,16 @@ export const searchBarSlice = createSlice({
     initialState: {
         searchData: [],
         searchTerm: '',
+        previousSearchTerm: '',
         isSearching: false,
         failedSearch: false,
     },
     reducers: {
         changeSearchTerm: (state, action) => {
             state.searchTerm = action.payload
+        },
+        setPreviousSearchTerm: (state, action) => {
+            state.previousSearchTerm = action.payload
         }
     },
     extraReducers: (builder) => {
@@ -45,5 +49,6 @@ export const isSearching = (state) => state.searchBar.isSearching
 export const failedSearch = (state) => state.searchBar.failedSearch
 export const selectSearchData = (state) => state.searchBar.searchData
 export const selectSearchTerm = (state) => state.searchBar.searchTerm
-export const {changeSearchTerm} = searchBarSlice.actions
+export const selectPreviousSearchTerm = (state) => state.searchBar.previousSearchTerm
+export const {changeSearchTerm, setPreviousSearchTerm} = searchBarSlice.actions
 export default searchBarSlice.reducer
