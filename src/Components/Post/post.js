@@ -3,10 +3,11 @@ import { changeSubreddit } from "../NewsFeed/newsFeedSlice";
 import { addFavorite } from "../Favorites/favoritesSlice";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { loadComments, setCurrentPost } from "../Comments/commentsSlice";
 
 const Post = ({post}) => {
     const navigate = useNavigate()
-    const {title, score, author, subreddit, url, post_hint, selftext} = post.data
+    const {title, score, author, subreddit, url, post_hint, selftext, permalink} = post.data
     const videoData = post.data.media?.reddit_video
     let videoUrl
     let videoRedirect
@@ -38,10 +39,15 @@ const Post = ({post}) => {
     const handleAddition = () => {
         dispatch(addFavorite(subreddit))
     }
+    const visitPost = () => {
+        dispatch(setCurrentPost(post))
+        dispatch(loadComments(permalink))
+        navigate('/comments')
+    }
     
     return (
         <div className="postContainer">
-            <h3 className="postTitle">{title}</h3>
+            <h3 onClick={visitPost} className="postTitle">{title}</h3>
             {imageUrl && <img src={imageUrl} style={{width: 200, height: 200}}className="postImage" />}
             {thumbnail && <img src={thumbnail} style={{width: 200, height: 200}}className="postImage" />}
             {videoUrl && 
@@ -52,7 +58,7 @@ const Post = ({post}) => {
                 <p className="videoRedirectLink" onClick={handleVideoRedirect}>Click here to view the video with sound on reddit</p>
             </div>}
             {post_hint === "link" && <p onClick={handleLinkClick}>{url}</p>}
-            {selftext && <p className="blurb">{`${blurb}...`}</p>}
+            {selftext && <p className="blurb" onClick={visitPost}>{`${blurb}...`}</p>}
             <p className="postScore">{score}</p>
             <p className="postAuthor">{author}</p>
             <p className="postSubreddit" onClick={handleSubredditClick}>{`r/${subreddit}`}</p><button onClick={handleAddition}>+</button>
