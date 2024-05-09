@@ -1,4 +1,5 @@
 import React from "react";
+import './comments.css'
 
 const Comment = ({comment}) => {
     const { author, body, replies } = comment.data
@@ -7,9 +8,9 @@ const Comment = ({comment}) => {
 
     return (
         <ul>
-            {body.length>0 && <li className="commentBody">
+            {body && <li className="commentBody">
                 {body}
-                <p className="commentAuthor">{author}</p>
+                <p className="commentAuthor">&#8627;   u/{author}</p>
             </li>}
             {hasReplies && replies.data.children.map((reply) => (
                 <Comment comment={reply} />

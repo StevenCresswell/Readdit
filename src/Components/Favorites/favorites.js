@@ -1,4 +1,5 @@
 import React from "react";
+import './favorites.css'
 import { useSelector, useDispatch } from "react-redux";
 import { selectFavoritesList, favoritesDisplayed, toggleDisplay } from "./favoritesSlice";
 import FavoritesListItem from "./favoritesListItem";
@@ -14,10 +15,10 @@ const Favorites = () => {
 
 
     return (
-        <div className="favoritesList">
-            <button onClick={handleToggle}>Favorites</button>
+        <div className="favorites">
+            {displayed ? <button className="favoritesButton" onClick={handleToggle}>Hide Favorites</button> : <button className="favoritesButton" onClick={handleToggle}>Show Favorites</button>}
             {displayed === true && 
-                <ul>
+                <ul className="favoritesList">
                     {favoritesList.map((subreddit) => (
                         <FavoritesListItem subreddit={subreddit} />
                     ))}

@@ -1,0 +1,27 @@
+#banner {
+    display: flex;
+    justify-content: center;
+}
+
+#title {
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+#main {
+    display: flex;
+    width: 100%;
+}
+
+#menu {
+    width: 30%;
+}
+
+#content {
+    width: 70%;
+    padding-right: 20%;
+}
+
+h1 {
+    font-size: 4rem;
+}

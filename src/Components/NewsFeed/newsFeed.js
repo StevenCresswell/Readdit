@@ -2,6 +2,7 @@ import React, {useEffect} from "react";
 import { loadNewsFeed, isLoadingData, failedLoadData, selectSubreddit, selectData } from "./newsFeedSlice";
 import { useDispatch, useSelector } from "react-redux";
 import Post from "../Post/post";
+import './newsFeed.css'
 
 const NewsFeed = () => {
     const dispatch = useDispatch();

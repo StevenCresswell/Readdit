@@ -1,0 +1,56 @@
+.removalButton {
+    border: none;
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+    align-self: center;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: left;
+    background-color: rgba(169, 169, 169, 0);
+    color: white;
+    margin-left: 0;
+}
+
+.removalButton:hover {
+    color: #FF5700
+}
+
+.favoritesListItem {
+    display: flex;
+}
+
+.favoritesListItem li {
+    list-style: none;
+    cursor: pointer;
+}
+
+.favoritesListItem li:hover {
+    text-decoration: underline;
+}
+
+.favoritesList {
+    padding-inline-start: 0;
+}
+
+.favoritesButton {
+    border: none;
+    cursor: pointer;
+    height: 2rem;
+    width: auto;
+    align-self: center;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: left;
+    background-color: rgba(169, 169, 169, 0);
+    color: white;
+    margin-left: 0;  
+}
+
+.favoritesButton:hover {
+    color: #FF5700
+}
+
+.favorites {
+    margin-top: 20px;
+}

@@ -1,0 +1,22 @@
+input {
+    background-color: #2b2a2a;
+    color: white;
+}
+
+#submit {
+    border: none;
+    cursor: pointer;
+    height: 2rem;
+    width: auto;
+    align-self: center;
+    padding-bottom: 1rem;
+    font-size: 1rem;
+    text-align: left;
+    background-color: rgba(169, 169, 169, 0);
+    color: white;
+    margin-left: 0;  
+}
+
+#submit:hover {
+    color: #FF5700
+}

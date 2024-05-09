@@ -1,0 +1,72 @@
+.postContainer {
+    border-bottom: 1px gray solid;
+    padding-bottom: 10px;
+}
+
+.contentDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.postImage {
+    max-width: 80%;
+}
+
+.postScore {
+    align-self: flex-end;
+    color: #FF5700
+}
+
+.addButton {
+    border: none;
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+    align-self: center;
+    font-size: 2rem;
+    text-align: left;
+    background-color: rgba(169, 169, 169, 0);
+    color: white;
+}
+
+.addButton:hover {
+    color: #FF5700
+}
+
+.postFooter {
+    display: flex;
+}
+
+.added {
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.postTitle {
+    font-size: 2rem;
+    cursor: pointer;
+    font-style: italic;
+}
+
+.postTitle:hover {
+    text-decoration: underline;
+}
+
+.postAuthor {
+    font-style: italic;
+}
+
+.videoRedirectLink {
+    cursor: pointer;
+}
+
+.postSubreddit{
+    cursor: pointer;
+}
+.postSubreddit:hover {
+    text-decoration: underline;
+}
+
+.blurb {
+    cursor: pointer;
+}

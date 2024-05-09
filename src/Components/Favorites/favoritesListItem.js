@@ -1,4 +1,5 @@
 import React from "react";
+import './favorites.css'
 import { removeFavorite } from "./favoritesSlice";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -18,10 +19,10 @@ const FavoritesListItem = ({subreddit}) => {
     }
 
     return(
-        <>
-            <li onClick={handleSubredditClick}>{`r/${subreddit}`}</li>
-            <button onClick={handleRemoval}>x</button>
-        </>
+        <div className="favoritesListItem">
+            <button className="removalButton" onClick={handleRemoval}>x</button>
+            <li onClick={handleSubredditClick}>{`r/${subreddit}`}</li> 
+        </div>
     )
 }
 

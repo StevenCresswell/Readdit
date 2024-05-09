@@ -1,4 +1,5 @@
 import React from "react";
+import './root.css'
 import SearchBar from "./SearchBar/searchBar";
 import Favorites from "./Favorites/favorites";
 import { Outlet } from 'react-router-dom'
@@ -18,12 +19,18 @@ const Root = () => {
     return (
         <div>
             <div id="banner">
-                <h1 onClick={handleClick}>Readdit</h1>
+                <h1 id="title" onClick={handleClick}>Readdit</h1>
                 <img src={redditLogo} alt="reddit logo"/>
-                <SearchBar />
             </div>
-            <Favorites />
-            <Outlet />
+            <SearchBar />
+            <div id="main">
+                <div id="menu">
+                    <Favorites />
+                </div>
+                <div id="content">
+                    <Outlet />
+                </div>
+            </div>
         </div>
     )
 }
