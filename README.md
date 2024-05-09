@@ -21,7 +21,7 @@ Below is a list of features to be added (when I get a chance!):
 
 ## How to use:
 
-This app is hosted on netlify at the following link: 
+This app is hosted on netlify at the following link: <readditreader.netlify.app>
 
 Alternatively, please feel free to download the code and host it locally. Please follow the instructions below to do so.
 
