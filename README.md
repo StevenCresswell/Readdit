@@ -1,3 +1,30 @@
+
+# Welcome to Readdit!
+
+Readdit is a lightweight and easy to use Reddit-reader app made using React and Redux. Perfect for mindlessly scrolling through Reddit and lurking on your favourite subreddits.
+
+## Features:
+
+* Generate a newsfeed based upon your subreddit of choice (defaults to r/popular).
+* View comments for individual posts (by clicking a post title or post blurb).
+* Easily view individual subreddits by clicking on them wherever they appear.
+* Search bar in which you can search for posts/subreddits and more.
+* Favorites list - add subreddits to a favorites list with the click of a button to enable viewing later!
+
+## Upcoming Features:
+
+Below is a list of features to be added (when I get a chance!):
+* Light-mode (and the ability to switch between light and dark).
+* See posts/comments by a user by clicking their name.
+* Displaying images/gifs in comments.
+* Displaying posts that contain a gallery of images.
+
+## How to use:
+
+This app is hosted on netlify at the following link: 
+
+Alternatively, please feel free to download the code and host it locally. Please follow the instructions below to do so.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
