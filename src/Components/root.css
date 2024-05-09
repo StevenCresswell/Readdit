@@ -25,3 +25,38 @@
 h1 {
     font-size: 4rem;
 }
+
+@media only screen and (max-width: 1024px) {
+    #content {
+        padding-right: 10%;
+    };
+}
+
+@media only screen and (max-width: 768px) {
+    #content {
+        padding-right: 5%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    #content {
+        padding-left: 5%;
+        width: 90%;
+        padding-right: 5%;
+        overflow: hidden;
+    }
+    #main {
+        flex-direction: column;
+        justify-content: center;
+    }
+    #menu {
+        padding-left: 5%;
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    h1 {
+        font-size: 3rem;
+    }
+}

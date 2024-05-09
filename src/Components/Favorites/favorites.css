@@ -54,3 +54,16 @@
 .favorites {
     margin-top: 20px;
 }
+
+@media only screen and (max-width: 425px) {
+    .favoritesButton {
+        font-size: 1rem;
+    }
+    .favorites {
+        margin-top: 5px;
+    }
+    .removalButton {
+        font-size: 1rem;
+        width: 1.2rem;
+    }
+}

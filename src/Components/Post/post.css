@@ -12,6 +12,10 @@
     max-width: 80%;
 }
 
+.postVideo {
+    max-width: 80%;
+}
+
 .postScore {
     align-self: flex-end;
     color: #FF5700
@@ -69,4 +73,10 @@
 
 .blurb {
     cursor: pointer;
+}
+
+@media only screen and (max-width: 425px) {
+    .postTitle {
+        font-size: 1.25rem;
+    }
 }

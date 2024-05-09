@@ -17,9 +17,9 @@ const SearchBar = () => {
         if (searchTerm) {
         dispatch(makeQuery(searchTerm))
         dispatch(setPreviousSearchTerm(searchTerm))
-        }
         navigate('/search-results')
         dispatch(changeSearchTerm(''))
+        }
     }
 
     return (

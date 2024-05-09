@@ -20,3 +20,9 @@ input {
 #submit:hover {
     color: #FF5700
 }
+
+@media only screen and (max-width: 435px) {
+    input {
+        margin-left: 5%;
+    }
+}

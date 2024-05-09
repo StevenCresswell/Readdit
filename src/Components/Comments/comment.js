@@ -7,7 +7,7 @@ const Comment = ({comment}) => {
     const hasReplies = replies && replies.data && replies.data.children
 
     return (
-        <ul>
+        <ul className="comment">
             {body && <li className="commentBody">
                 {body}
                 <p className="commentAuthor">&#8627;   u/{author}</p>
