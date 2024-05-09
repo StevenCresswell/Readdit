@@ -12,7 +12,7 @@ const NewsFeed = () => {
     const subreddit = useSelector(selectSubreddit);
     useEffect(() => {
         dispatch(loadNewsFeed(subreddit))
-    }, [subreddit])
+    }, [dispatch, subreddit])
 
     if (dataIsLoading) return <div>Loading News Feed</div>;
     if (dataLoadFailed) return <div>Failed to Load News Feed. This may be due to the rate limitations of the free API. See <a href="https://www.reddit.com/r/reddit/comments/145bram/addressing_the_community_about_changes_to_our_api/">this link</a> for further info and try again later.</div>

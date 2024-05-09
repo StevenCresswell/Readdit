@@ -51,8 +51,8 @@ const Post = ({post}) => {
         <div className="postContainer">
             <h3 onClick={visitPost} className="postTitle">{title}</h3>
             <div className="contentDiv">
-                {imageUrl && <img src={imageUrl} className="postImage" />}
-                {thumbnail && <img src={thumbnail} className="postImage" />}
+                {imageUrl && <img src={imageUrl} className="postImage" alt="post content" />}
+                {thumbnail && <img src={thumbnail} className="postImage" alt="post content" />}
                 {videoUrl && 
                 <div className="videoDiv">
                     <video className="postVideo"controls>

@@ -1,4 +1,5 @@
 import React from "react";
+import './comments.css'
 import Post from "../Post/post";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -20,12 +21,12 @@ const CommentContainer = () => {
 
     return (
         <div>
-            <p onClick={handleClick}>Return to News Feed</p>
+            <p className="returnLink" onClick={handleClick}>Return to News Feed</p>
             <Post post={post} />
             {comments.map((comment) => (
                 <Comment comment={comment} />
             ))}
-            <p onClick={handleClick}>Return to News Feed</p>
+            <p className="returnLink" onClick={handleClick}>Return to News Feed</p>
         </div>
     )
 }

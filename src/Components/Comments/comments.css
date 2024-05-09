@@ -2,6 +2,14 @@
     font-style: italic;
 }
 
+.returnLink {
+    cursor: pointer;
+}
+
+.returnLink:hover {
+    text-decoration: underline;
+}
+
 @media only screen and (max-width: 768px) {
     .comment {
         padding-inline-start: 15px;
